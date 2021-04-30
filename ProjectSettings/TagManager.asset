@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PickUpWeapon
+  - Drawer
+  - Enemy
   layers:
   - Default
   - TransparentFX

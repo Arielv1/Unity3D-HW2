@@ -13,7 +13,8 @@ public class DrawerMotion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = this.gameObject.transform.parent.GetComponent<Animator>();
+        //  animator = this.gameObject.transform.parent.GetComponent<Animator>();
+        animator = this.gameObject.GetComponent<Animator>();
         isDrawerClosed = true;
     }
 
@@ -24,7 +25,7 @@ public class DrawerMotion : MonoBehaviour
         //raycast forward from main camera
         if (Physics.Raycast(aCamera.transform.position, aCamera.transform.forward, out hit))
         {
-            if (hit.transform.gameObject.name == this.gameObject.name && hit.distance < 8)
+            if (hit.transform.gameObject.name == this.gameObject.name && hit.distance < 8 && hit.transform.gameObject.tag == "Drawer")
             {
                 if (!isTriggerHit)
                 {

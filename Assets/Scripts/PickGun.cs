@@ -22,7 +22,7 @@ public class PickGun : MonoBehaviour
         //raycast forward from main camera
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit))
         {
-            if (hit.transform.gameObject.name == this.gameObject.name && hit.distance < 8)
+            if (hit.transform.gameObject.name == this.gameObject.name && hit.distance < 4 && hit.transform.gameObject.tag == "PickUpWeapon")
             {
                 if (!isTriggerHit)
                 {
